@@ -189,7 +189,8 @@ namespace LWGUI
 			
 			EditorGUI.BeginChangeCheck();
 			EditorGUI.showMixedValue = false;
-			surfaceEnum = (SurfaceEnum)EditorGUI.EnumPopup(rect, surfaceEnum);
+			
+			surfaceEnum = (SurfaceEnum)EditorGUI.EnumPopup(rect, (SurfaceEnum)prop.floatValue);
 			
 			//Helper.PopupShaderProperty(editor, prop, label, surfaceTypeNames);
 
@@ -198,7 +199,7 @@ namespace LWGUI
 				EditorGUI.showMixedValue = prop.hasMixedValue;
 
 				Helper.SetSurfaceType(editor.targets, (int)surfaceEnum);
-				prop.intValue = (int)surfaceEnum;
+				prop.floatValue = (float)surfaceEnum;
 			}
 		}
 	}

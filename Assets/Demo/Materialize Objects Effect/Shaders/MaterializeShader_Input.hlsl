@@ -3,6 +3,8 @@
 
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/SurfaceInput.hlsl"
+#include "Assets/Res/Shaders/ShaderLibrary/Noise.hlsl"
+
 
 TEXTURE2D(_SpecGlossMap);       SAMPLER(sampler_SpecGlossMap);
 
@@ -13,6 +15,7 @@ CBUFFER_START(UnityPerMaterial)
     half4 _EmissionColor;
     half _Cutoff;
     half _Surface;
+    half _ClipThresold;
 CBUFFER_END
 
 #ifdef UNITY_DOTS_INSTANCING_ENABLED
@@ -22,6 +25,7 @@ CBUFFER_END
         UNITY_DOTS_INSTANCED_PROP(float4, _EmissionColor)
         UNITY_DOTS_INSTANCED_PROP(float , _Cutoff)
         UNITY_DOTS_INSTANCED_PROP(float , _Surface)
+        UNITY_DOTS_INSTANCED_PROP(float , _ClipThresold)
     UNITY_DOTS_INSTANCING_END(MaterialPropertyMetadata)
 
     #define _BaseColor          UNITY_ACCESS_DOTS_INSTANCED_PROP_FROM_MACRO(float4 , Metadata_BaseColor)
@@ -29,6 +33,7 @@ CBUFFER_END
     #define _EmissionColor      UNITY_ACCESS_DOTS_INSTANCED_PROP_FROM_MACRO(float4 , Metadata_EmissionColor)
     #define _Cutoff             UNITY_ACCESS_DOTS_INSTANCED_PROP_FROM_MACRO(float  , Metadata_Cutoff)
     #define _Surface            UNITY_ACCESS_DOTS_INSTANCED_PROP_FROM_MACRO(float  , Metadata_Surface)
+    #define _ClipThresold            UNITY_ACCESS_DOTS_INSTANCED_PROP_FROM_MACRO(float  , Metadata_ClipThresold)
 #endif
 
 half4 SampleSpecularSmoothness(float2 uv, half alpha, half4 specColor, TEXTURE2D_PARAM(specMap, sampler_specMap))
@@ -53,6 +58,10 @@ inline void InitializeSimpleLitSurfaceData(float2 uv, out SurfaceData outSurface
 
     half4 albedoAlpha = SampleAlbedoAlpha(uv, TEXTURE2D_ARGS(_BaseMap, sampler_BaseMap));
     outSurfaceData.alpha = albedoAlpha.a * _BaseColor.a;
+
+
+    //clip(noise - _Cutoff);
+    
     AlphaDiscard(outSurfaceData.alpha, _Cutoff);
 
     outSurfaceData.albedo = albedoAlpha.rgb * _BaseColor.rgb;

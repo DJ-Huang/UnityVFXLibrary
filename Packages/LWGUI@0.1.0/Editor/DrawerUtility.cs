@@ -193,7 +193,6 @@ namespace LWGUI
                     m.SetOverrideTag("RenderType", "Opaque");
                     m.SetInt(PropertyInfo.SrcBlend, (int) UnityEngine.Rendering.BlendMode.One);
                     m.SetInt(PropertyInfo.DstBlend, (int) UnityEngine.Rendering.BlendMode.Zero);
-                    m.SetInt(PropertyInfo.ZWrite, 1);
                     m.DisableKeyword("_ALPHABLEND_ON");
                     m.DisableKeyword("_ALPHATEST_ON");
                 }
@@ -203,7 +202,6 @@ namespace LWGUI
 					m.SetOverrideTag("RenderType", "Transparent");
 					m.SetInt(PropertyInfo.SrcBlend, (int) UnityEngine.Rendering.BlendMode.SrcAlpha);
 					m.SetInt(PropertyInfo.DstBlend, (int) UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-					m.SetInt(PropertyInfo.ZWrite, 0);
 					m.EnableKeyword("_ALPHABLEND_ON");
 					m.DisableKeyword("_ALPHATEST_ON");
 				}

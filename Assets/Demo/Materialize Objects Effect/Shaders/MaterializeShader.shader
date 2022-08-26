@@ -13,17 +13,17 @@ Shader "VFXLibrary/MaterializeShader"
         [Main(Feature, _, off, off)]
         _group1 ("FeatureSettings", float) = 1
         [Space()]
-        
+        [Sub(Feature)] _ClipThresold ("Clip Threshold", Range(0, 1)) = 0
 
         [Space()]
         [Space()]
         [Title(_, RenderSetting)]
-        [Surface(_)] _Surface("Surface Type", Int) = 0.0
+        [Surface(_)] _Surface("Surface Type", Float) = 0.0
         [Enum(UnityEngine.Rendering.CullMode)] _Cull("Cull Mode", Float) = 2.0
         [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Src Alpha", Float) = 1.0
         [Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Dst Alpha", Float) = 0.0
         [Enum(Off, 0, On, 1)] _ZWrite("Z Write", Float) = 1.0
-        Cutoff("Alpha Clipping", Range(0.0, 1.0)) = 0.5
+        _Cutoff("Alpha Clipping", Range(0.0, 1.0)) = 0.5
         [Queue(_)] _QueueOffset("Queue offset", Range(-50, 50)) = 0.0
     }
 
@@ -47,6 +47,7 @@ Shader "VFXLibrary/MaterializeShader"
 
             // -------------------------------------
             // Material Keywords
+            #pragma shader_feature_local_fragment _ALPHATEST_ON
 
             // -------------------------------------
             // Universal Pipeline keywords
@@ -97,7 +98,6 @@ Shader "VFXLibrary/MaterializeShader"
 
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
-            #pragma target 4.5
 
             // -------------------------------------
             // Material Keywords
@@ -134,7 +134,6 @@ Shader "VFXLibrary/MaterializeShader"
 
             HLSLPROGRAM
             #pragma exclude_renderers gles gles3 glcore
-            #pragma target 4.5
 
             #pragma vertex DepthOnlyVertex
             #pragma fragment DepthOnlyFragment

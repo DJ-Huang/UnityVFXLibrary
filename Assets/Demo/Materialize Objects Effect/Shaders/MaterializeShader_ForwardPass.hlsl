@@ -2,7 +2,6 @@
 #define NIVERSAL_VFX_MATERIALIZE_PASS_INCLUDED
 
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
-#include "Assets/Res/Shaders/ShaderLibrary/Noise.hlsl"
 
 struct Attributes
 {
@@ -182,9 +181,11 @@ half4 Fragment(Varyings input) : SV_Target
     color.rgb = MixFog(color.rgb, inputData.fogCoord);
     color.a = OutputAlpha(color.a, _Surface);
 
-    Unity_SimpleNoise_float(input.uv.xy, 50, color.r);
+    half noise = 0;
+    Unity_SimpleNoise_float(input.uv.xy, 50, noise);
+    clip(noise - _ClipThresold);
 
-    return half4(color.rrr, 1);
+    return half4(1,1,1, 1);
 }
 
 
