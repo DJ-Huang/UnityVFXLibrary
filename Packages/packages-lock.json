@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.jasonma.lwgui": {
-      "version": "file:LWGUI",
+      "version": "file:LWGUI@0.1.0",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

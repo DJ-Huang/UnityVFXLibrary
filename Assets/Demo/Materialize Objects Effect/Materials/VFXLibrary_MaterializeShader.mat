@@ -19,7 +19,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
@@ -54,6 +54,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _tex:
+        m_Texture: {fileID: 2800000, guid: 2eb0316719ec8c54a8bcabcc3056a5f8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,7 +72,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Cutoff: 0.5
     - _AlphaClip: 0
+    - _BaseMap: 0
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
@@ -97,6 +103,8 @@ Material:
     - _key2_Float2: 0
     - _key3_Float3: 0
     - _key3_Float4_PowerSlider: 0
+    - _rangeEnd: 15.012455
+    - _rangeStart: -8.674377
     - _toggle: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
