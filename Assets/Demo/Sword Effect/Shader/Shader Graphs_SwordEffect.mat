@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3901250558188176721
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_SwordEffect
+  m_Shader: {fileID: -6465566751694194690, guid: 894a18ba4514f56438ac2fc24f25354a, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: ee2125694b0db2043b26a65dac23e45f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MR:
+        m_Texture: {fileID: 2800000, guid: e5afad012fdd8df47b41db075dd03686, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_3a1932b0d0dd4a268f07aec58d8da84d_Out_0:
+        m_Texture: {fileID: 2800000, guid: e5afad012fdd8df47b41db075dd03686, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_8393bd5ef8544bc18cfc602ec42cb13f_Out_0:
+        m_Texture: {fileID: 2800000, guid: ee2125694b0db2043b26a65dac23e45f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _DistortionScale: 50
+    - _DistortionStrength: 0.02
+    - _FresnelPow: 2
+    - _GradientNoisePower: 4
+    - _GradientNoiseScale: 40
+    - _GradientNoiseSpeed: 1
+    - _Matellic: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Smoothness: 0.617
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _DistortionSpeed: {r: 0, g: 0.15, b: 0, a: 0}
+    - _FresnelColor: {r: 23.968628, g: 23.968628, b: 23.968628, a: 1}
+    - _GradientNoiseColor: {r: 0.24140087, g: 0.569706, b: 1.8443027, a: 1}
+    - _GradientNoiseSpeed: {r: 0, g: 0.2, b: 0, a: 0}
+  m_BuildTextureStacks: []
