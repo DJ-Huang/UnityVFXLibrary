@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 97ede4124bb954c46a65a876df4cfad2
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - Wind_MaskTex: {fileID: 2800000, guid: 8132ffd5113818049a1b7ec588afbab3, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

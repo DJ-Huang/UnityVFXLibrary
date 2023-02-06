@@ -7,3 +7,5 @@ Temp
 *.sln
 UserSettings
 UserSettings
+Assets/AmplifyShaderEditor
+Assets/AmplifyShaderEditor.meta
