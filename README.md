@@ -2,6 +2,13 @@
 
 VFX Effects made with Unity.
 
+## Magic Orb Effect
+
+Study from: [Unity VFX Graph - Magic Orb Effect Tutorial](https://www.youtube.com/watch?v=7bMOhNUA1bI&t=14s)
+
+https://user-images.githubusercontent.com/18584942/217149974-6a7db789-7048-49a4-95bb-f8d47f4db68c.mp4
+
+
 ## Interactive Leaves
 
 Inspiration from Tsushima's interactable fallen leaves
@@ -11,3 +18,4 @@ https://user-images.githubusercontent.com/18584942/217142828-b7935035-e623-47c4-
 ## Related links
 
 - [LWGUI](https://github.com/JasonMa0012/LWGUI)
+
