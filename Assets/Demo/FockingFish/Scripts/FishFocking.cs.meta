@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 20a46f9a8a9af8f47bf73a81946b8d99
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _flockingCS: {fileID: 7200000, guid: de3272b0c00f6d94a8256e90e50a4f92, type: 3}
+  - _mesh: {instanceID: 0}
+  - _material: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

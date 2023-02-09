@@ -15,6 +15,12 @@ Inspiration from Tsushima's interactable fallen leaves
 
 https://user-images.githubusercontent.com/18584942/217142828-b7935035-e623-47c4-b24d-f242ded5f378.mp4
 
+## Fish Focking
+
+VFX Graph and Compute Shader 
+
+https://user-images.githubusercontent.com/18584942/217766052-6963eaf9-c612-416f-b70b-568c68256ac4.mp4
+
 ## Related links
 
 - [LWGUI](https://github.com/JasonMa0012/LWGUI)
