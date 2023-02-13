@@ -4,7 +4,7 @@ VFX Effects made with Unity.
 
 ## Magic Orb Effect
 
-Study from: [Unity VFX Graph - Magic Orb Effect Tutorial](https://www.youtube.com/watch?v=7bMOhNUA1bI&t=14s)
+from: [Unity VFX Graph - Magic Orb Effect Tutorial](https://www.youtube.com/watch?v=7bMOhNUA1bI&t=14s)
 
 https://user-images.githubusercontent.com/18584942/217149974-6a7db789-7048-49a4-95bb-f8d47f4db68c.mp4
 
